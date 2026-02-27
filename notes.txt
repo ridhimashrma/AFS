@@ -1,0 +1,52 @@
+
+
+
+
+types of exports
+1. default export 
+2. named export
+
+only one default export is allowed
+
+for multiple we use named exports 
+just add exports before the name of the function and for
+ import use curly brackets and write the name of the function which needs to be imported
+
+
+
+
+what are props?
+
+props are properties used to pass data from parent component to child component
+
+
+
+
+
+static website
+state variable vs regular variable
+
+
+
+
+
+virtual dom
+
+diffing algo
+previous virtual dom me kitne changes kru ki vo actual dom ke equal ho jaye
+reconciliation
+
+
+
+
+
+
+life cycle of react 
+
+
+
+
+
+
+
+case1 : 

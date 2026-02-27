@@ -1,0 +1,52 @@
+WHAT IS THIS KEYWORD
+
+DIFFERENCE BETWEEN CALL, APPLY AND BIND
+
+WHAT IS HOISTING?
+hoisting is a javascript default behaviour in which all the declarations 
+move to the top during memory creation phase
+
+var a;    (declaration is moved to top)
+
+Console.log(a+10) ---> NaN (not a number)
+console.log(a)    ---> Undefined
+var a=10;   ---> initialisation 
+
+
+
+JAVASCRIPT ka code alag alag phases me top to bottom do baar chalta hai
+global execution context ---> aisi jagah jaha sabko(variables, functions) memory milti hai aur code execute hota hai
+execution context do phase me divided hai
+
+    MEMORY CREATION PHASE                              CODE EXECUTION PHASE
+        |-----------|                                   log(a+10) = undefined +10 -> NaN
+        | undefined |                                   log(a) = undefined
+        |-----------|                                   a=10
+              a                                        log(a)=10
+
+
+is let or const variable also hoisted??
+    yes they are also hoisted but they are not initialised during memory execution phase,
+    their value is initialised during code initialisation phase 
+
+   MEMORY CREATION PHASE                              CODE EXECUTION PHASE
+        |-----------|                                   log(a) =Error cannot access a before initialisation
+LET A   |           |                                   a=10
+        |-----------|                                   log(a)=10
+
+
+
+
+log A
+let A
+log A
+output----> Error cannot access a before initialisation
+
+
+
+let A
+log A
+output-----> undefined
+
+
+let aur const ko ek special jagah pe meory milti hai jiska naam hai TEMPORAL DEAD ZONE (TDZ)
